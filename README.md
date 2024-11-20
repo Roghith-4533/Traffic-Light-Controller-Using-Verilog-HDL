@@ -1,8 +1,9 @@
 # Traffic-Light-Controller-Using-Verilog-HDL
-Aim
+
+# Aim
 To design and simulate a traffic light controller using Verilog HDL, and verify its functionality through a testbench in the Vivado 2023.1 simulation environment. The objective is to control the traffic lights for a junction with a specific time-based sequence for Red, Yellow, and Green lights.
 
-Apparatus Required
+# Apparatus Required
 Vivado 2023.1 or equivalent Verilog simulation tool.
 Computer system with a suitable operating system.
 FPGA board (optional for hardware verification).
@@ -29,8 +30,8 @@ Save and Document Results:
 
 Capture screenshots of the waveform and save the simulation logs to include in your report.
 
-Verilog Code for Traffic Light Controller
-
+# Verilog Code for Traffic Light Controller
+```
 module Traffic_light_controller_TB;
 reg clk,rst;
 wire[2:0]light_M1;
@@ -51,11 +52,12 @@ begin
      #1000000000;
      rst=0;
      #(1000000000*200);
+```
 
 output : ![traffic ](https://github.com/user-attachments/assets/c5fd48de-4cd2-468d-90f4-5e2645fdc3d3)
 
-Testbench for Traffic Light Controller
-
+# Testbench for Traffic Light Controller
+```
 module Traffic_light_controller_TB;
   reg clk, rst;
   wire [2:0] light_M1;  // Outputs for traffic light in direction M1
@@ -90,10 +92,11 @@ module Traffic_light_controller_TB;
     $finish;             // End simulation
   end
 endmodule
+```
 
-output:![tbtraffic](https://github.com/user-attachments/assets/2758662d-a06a-4161-a215-d2b2be71873d)
+# output:![tbtraffic](https://github.com/user-attachments/assets/2758662d-a06a-4161-a215-d2b2be71873d)
 
 
 
-Conclusion
+# Conclusion
 In this experiment, a traffic light controller was successfully designed and simulated using Verilog HDL. The design controlled the traffic lights to switch between Green, Yellow, and Red in a cyclic manner based on timing intervals. The testbench verified that the traffic lights followed the correct sequence and timing. The simulation results confirm the correct functionality of the traffic light controller, demonstrating the effectiveness of Verilog HDL in designing FSM-based controllers for real-world applications.
